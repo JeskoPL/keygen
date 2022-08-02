@@ -1,14 +1,12 @@
-import string
 import random
 
-
-def Generate_Password(num):
-    password = ''
-
-    for n in range(num):
-        x = random.randint(0, 99)
-        password += string.printable[x]
-    return password
-
-
-print(Generate_Password(8))
+chars = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+number = input('количество паролей?'+ "\n")
+length = input('длина пароля?'+ "\n")
+number = int(number)
+length = int(length)
+for n in range(number):
+    password =''
+    for i in range(length):
+        password += random.choice(chars)
+    print(password)
